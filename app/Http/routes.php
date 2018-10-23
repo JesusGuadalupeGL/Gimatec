@@ -11,6 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/head', function () {
+    return view('layout.head');
+});
+Route::get('/header', function () {
+    return view('layout.main_header');
+});
+Route::get('/sidebar', function () {
+    return view('layout.main_sidebar');
+});
+Route::get('/customer', function () {
+    return view('layout.customer_color');
+});
+
+Route::get('/footer', function () {
+    return view('layout.footer');
 });
