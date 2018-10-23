@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Municipio extends Model
+class Estados extends Model
 {
     //
 }

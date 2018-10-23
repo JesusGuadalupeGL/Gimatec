@@ -11,19 +11,8 @@
 |
 */
 
-Route::get('/head', function () {
-    return view('layout.head');
-});
-Route::get('/header', function () {
-    return view('layout.main_header');
-});
-Route::get('/sidebar', function () {
-    return view('layout.main_sidebar');
-});
-Route::get('/customer', function () {
-    return view('layout.customer_color');
+Route::get('/head', function(){
+    return view('sistema.catalogo_maqui');
 });
 
-Route::get('/footer', function () {
-    return view('layout.footer');
-});
+Route::get('/altaMaquina', 'c_maquinas@altaMaquina')->name('altaMaquina');
