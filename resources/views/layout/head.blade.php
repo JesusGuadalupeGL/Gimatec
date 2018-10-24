@@ -46,7 +46,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
         <ul class="nav navbar-nav flex-row">
           <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
           <li class="nav-item mr-auto">
-            <a class="navbar-brand" href="index-2.html">
+            <a class="navbar-brand" href="{{route('head')}}">
               <img class="brand-logo" alt="modern admin logo" src="images/logo/logo.png">
               <h3 class="brand-text">Modern Admin</h3>
             </a>
@@ -374,7 +374,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
     <div class="main-menu-content">
       <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
         <li class=" nav-item">
-          <a href="{{'altaMaquina'}}"><i class="icon-user-follow"></i>
+          <a href=""><i class="icon-user-follow"></i>
             <span class="menu-title" data-i18n="nav.support_documentation.main">Alta Maquina</span>
           </a>
         </li>
@@ -388,11 +388,11 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
             <span class="menu-title" data-i18n="nav.support_documentation.main">Ver Productos</span>
           </a>
         </li>
-        <li class=" nav-item"><a href="index-2.html"><i class="icon-control-play"></i><span class="menu-title">Menu</span></a>
+        <li class=" nav-item"><a href=""><i class="icon-control-play"></i><span class="menu-title">Maquina</span></a>
           <ul class="menu-content">
-            <li><a class="menu-item" href="" data-i18n="nav.dash.ecommerce">Submenu</a>
+            <li><a class="menu-item" href="{{'altaMaquina'}}" data-i18n="nav.dash.ecommerce">Alta Maquina</a>
             </li>
-            <li><a class="menu-item" href="" data-i18n="nav.dash.crypto">Submenu</a>
+            <li><a class="menu-item" href="{{'consultamaquina'}}" data-i18n="nav.dash.crypto"> Consultar Maquina</a>
             </li>
             <li class="active"><a class="menu-item" href="dashboard-sales.html" data-i18n="nav.dash.sales">Submenu</a>
             </li>
@@ -427,7 +427,9 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
       </div>
       <div class="content-body">
         <!-- Revenue, Hit Rate & Deals -->
+
       @yield('contenido')
+      
       </div>
     </div>
   </div>

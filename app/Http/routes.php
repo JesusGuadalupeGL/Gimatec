@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/head', function(){
-    return view('sistema.catalogo_maqui');
-});
+Route::get('/head', 'c_maquinas@inicio')->name('head');
+Route::get('/consultamaquina', 'c_maquinas@consulta')->name('consultamaquina');
 
 Route::get('/altaMaquina', 'c_maquinas@altaMaquina')->name('altaMaquina');
+Route::POST('/guardamaquina', 'c_maquinas@guardamaquina')->name('guardamaquina');

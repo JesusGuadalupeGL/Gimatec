@@ -9,12 +9,20 @@ use App\Maquinas;
 
 class c_maquinas extends Controller
 {
+	public function inicio()
+	{
+        return view('sistema.inicio');
+	}
+	public function consulta()
+	{
+        return view('sistema.consultamaquina');
+	}
     public function altaMaquina()
 	{
         return view('sistema.catalogo_maqui');
     }
 
-    public function guardaMaquina(Request $request)
+    public function guardamaquina(Request $request)
 	{
 		$validacion = $this->validate($request,
 		['nombre'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
@@ -48,6 +56,6 @@ class c_maquinas extends Controller
 		$maquina->existencias = $request->existencias;
 		$maquina->save();
 		
-		return redirect ('administrador');
+		return redirect ('/head');
 	}
 }
