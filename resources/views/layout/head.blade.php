@@ -9,8 +9,7 @@
   <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
   <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
   <meta name="author" content="PIXINVENT">
-  <title>Dashboard sales - Modern Admin - Clean Bootstrap 4 Dashboard HTML Template + Bitcoin
-    Dashboard
+  <title>GIMATEC
   </title>
   <link rel="apple-touch-icon" href="images/ico/apple-icon-120.png">
   <link rel="shortcut icon" type="image/x-icon" href="https://pixinvent.com/modern-admin-clean-bootstrap-4-dashboard-html-template/app-assets/images/ico/favicon.ico">
@@ -374,43 +373,57 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
     <div class="main-menu-content">
       <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
         <li class=" nav-item">
-          <a href=""><i class="icon-user-follow"></i>
-            <span class="menu-title" data-i18n="nav.support_documentation.main">Alta Maquina</span>
+          <a href="{{'altausuario'}}"><i class="icon-user-follow"></i>
+            <span class="menu-title"  data-i18n="nav.support_documentation.main">Nuevo Usuario</span>
           </a>
         </li>
         <li class=" nav-item">
-          <a href="ccliente/show"><i class="icon-list"></i>
-            <span class="menu-title" data-i18n="nav.support_documentation.main">Ver Clientes</span>
+          <a href="{{'reporteusu'}}"><i class="icon-list"></i>
+            <span class="menu-title" data-i18n="nav.support_documentation.main">Perfil</span>
           </a>
         </li>
-        <li class=" nav-item">
-          <a href="cproducto/show"><i class="icon-list"></i>
-            <span class="menu-title" data-i18n="nav.support_documentation.main">Ver Productos</span>
-          </a>
+        <li class=" nav-item"><a href=""><i class="icon-control-play"></i><span class="menu-title">Clientes</span></a>
+          <ul class="menu-content">
+            <li><a class="menu-item" href="{{'altacliente'}}" data-i18n="nav.dash.ecommerce">Alta Cliente</a>
+            </li>
+            <li><a class="menu-item" href="{{'reportecliente'}}" data-i18n="nav.dash.crypto"> Consultar Cliente</a>
+            </li>
+            <li class="active"><a class="menu-item" href="dashboard-sales.html" data-i18n="nav.dash.sales">Cliente</a>
+            </li>
+          </ul>
         </li>
+        
         <li class=" nav-item"><a href=""><i class="icon-control-play"></i><span class="menu-title">Maquina</span></a>
           <ul class="menu-content">
             <li><a class="menu-item" href="{{'altaMaquina'}}" data-i18n="nav.dash.ecommerce">Alta Maquina</a>
             </li>
             <li><a class="menu-item" href="{{'consultamaquina'}}" data-i18n="nav.dash.crypto"> Consultar Maquina</a>
             </li>
-            <li class="active"><a class="menu-item" href="dashboard-sales.html" data-i18n="nav.dash.sales">Submenu</a>
+            <li class="active"><a class="menu-item" href="dashboard-sales.html" data-i18n="nav.dash.sales">Maquina</a>
             </li>
           </ul>
         </li>
-        <li class=" nav-item"><a href="add-on-block-ui.html"><i class="la la-terminal"></i><span class="menu-title" data-i18n="nav.add_on_block_ui.main">Opcion1</span></a>
+        <li class=" nav-item"><a href=""><i class="icon-control-play"></i><span class="menu-title">Servicio</span></a>
+          <ul class="menu-content">
+            <li><a class="menu-item" href="{{'altaservicio'}}" data-i18n="nav.dash.ecommerce">Programas Servicio</a>
+            </li>
+            <li><a class="menu-item" href="{{'reporteser'}}" data-i18n="nav.dash.crypto"> Consultar Dia Servicio</a>
+            </li>
+            <li class="active"><a class="menu-item" href="dashboard-sales.html" data-i18n="nav.dash.sales">Servicio</a>
+            </li>
+          </ul>
         </li>
-        <li class=" nav-item"><a href="add-on-image-cropper.html"><i class="la la-crop"></i><span class="menu-title" data-i18n="nav.add_on_image_cropper.main">Opcion2</span></a>
-        </li> 
-        <li class=" navigation-header">
-          <span data-i18n="nav.category.support">Soporte</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip"
-          data-placement="right" data-original-title="Support"></i>
+        <li class=" nav-item"><a href=""><i class="icon-control-play"></i><span class="menu-title">Detalle</span></a>
+          <ul class="menu-content">
+            <li><a class="menu-item" href="{{'altadetalle'}}" data-i18n="nav.dash.ecommerce">Alta detalle</a>
+            </li>
+            <li><a class="menu-item" href="{{'reportedetalle'}}" data-i18n="nav.dash.crypto"> Consultar detalle</a>
+            </li>
+            <li class="active"><a class="menu-item" href="dashboard-sales.html" data-i18n="nav.dash.sales">Detalle</a>
+            </li>
+          </ul>
         </li>
-        <li class=" nav-item">
-          <a href="https://pixinvent.com/modern-admin-clean-bootstrap-4-dashboard-html-template/documentation"><i class="la la-text-height"></i>
-            <span class="menu-title" data-i18n="nav.support_documentation.main">Documentación</span>
-          </a>
-        </li>
+        
          <li class=" nav-item">
           <a href="clogin/cerrarsession"><i class="icon-logout"></i>
             <span class="menu-title" data-i18n="nav.support_documentation.main">Cerrar Session</span>

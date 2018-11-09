@@ -15,7 +15,8 @@ class c_maquinas extends Controller
 	}
 	public function consulta()
 	{
-        return view('sistema.consultamaquina');
+		$maquinas = maquinas::all();
+        return view('sistema.consultamaquina')->with('maquinas', $maquinas);
 	}
     public function altaMaquina()
 	{
@@ -28,15 +29,16 @@ class c_maquinas extends Controller
 		['nombre'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
 		'archivo'=>'image|mimes:jpg,jpeg,png,gif',
 		'descripcion'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
-		'precio'=>['regex:/^[0-9].[0-9]{2}+$/'],
+		'precio'=>'required|numeric',
 		'stock'=>['regex:/^[0-9]+$/'],
+		'categoria'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
 		'existencias'=>'required|numeric'
 		]);
 
 		$file = $request->file('archivo');
 		if($file!="")
 		{
-			$ldate = date('Ymd_His');
+			$ldate = date('Ymd_His_');
 			$img = $file->getClientOriginalName();
 			$img2 = $ldate.$img;
 			\Storage::disk('local')->put($img2, \File::get($file));

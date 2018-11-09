@@ -24,7 +24,7 @@ Route::get('/reportecliente','sistema@reportecliente')->name('reportecliente');
 //rutas del catalogo usuarios
 Route::get('/altausuario','sistema@altausuario')->name('altausuario');
 Route::POST('/guardausuario','sistema@guardausuario')->name('guardausuario');
-Route::get('/reporteusu','sistema@reporteusu')->name('reporteusu');
+Route::get('/reporteusu','sistema@reporteusu');
 /*
 Route::get('/eliminam/{idm}','sistema@eliminam')->name('eliminam');
 Route::get('/modificaam/{idm}','sistema@modificam')->name('modificam');
@@ -34,8 +34,7 @@ Route::POST('/guardaedicionm','sistema@guardaedicionm')->name('guardaedicionm');
 */
 Route::get('/altaservicio','sistema@altaservicio')->name('altaservicio');
 Route::POST('/guardaservicio','sistema@guardaservicio')->name('guardaservicio');
-Route::get('/reporteser','sistema@reporteser')->name('reporteser');
-
-Route::get('/altadetalle','sistema@altadetalle')->name('altadetalle');
+Route::get('/reporteser','sistema@reporteser');
+Route::get('/altadetalle','sistema@altadetalle');
 Route::POST('/guardadetalle','sistema@guardadetalle')->name('guardadetalle');
-Route::get('/reportedetalle','sistema@reportedetalle')->name('reportedetalle');
+Route::get('/reportedetalle','sistema@reportedetalle');
