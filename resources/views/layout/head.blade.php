@@ -373,7 +373,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
     <div class="main-menu-content">
       <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
         <li class=" nav-item">
-          <a href="{{'altausuario'}}"><i class="icon-user-follow"></i>
+          <a href="{{'usuario'}}"><i class="icon-user-follow"></i>
             <span class="menu-title"  data-i18n="nav.support_documentation.main">Nuevo Usuario</span>
           </a>
         </li>
@@ -384,7 +384,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
         </li>
         <li class=" nav-item"><a href=""><i class="icon-control-play"></i><span class="menu-title">Clientes</span></a>
           <ul class="menu-content">
-            <li><a class="menu-item" href="{{'altacliente'}}" data-i18n="nav.dash.ecommerce">Alta Cliente</a>
+            <li><a class="menu-item" href="{{'cliente'}}" data-i18n="nav.dash.ecommerce">Alta Cliente</a>
             </li>
             <li><a class="menu-item" href="{{'reportecliente'}}" data-i18n="nav.dash.crypto"> Consultar Cliente</a>
             </li>
@@ -405,7 +405,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
         </li>
         <li class=" nav-item"><a href=""><i class="icon-control-play"></i><span class="menu-title">Servicio</span></a>
           <ul class="menu-content">
-            <li><a class="menu-item" href="{{'altaservicio'}}" data-i18n="nav.dash.ecommerce">Programas Servicio</a>
+            <li><a class="menu-item" href="{{'servicio'}}" data-i18n="nav.dash.ecommerce">Programas Servicio</a>
             </li>
             <li><a class="menu-item" href="{{'reporteser'}}" data-i18n="nav.dash.crypto"> Consultar Dia Servicio</a>
             </li>
@@ -415,7 +415,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
         </li>
         <li class=" nav-item"><a href=""><i class="icon-control-play"></i><span class="menu-title">Detalle</span></a>
           <ul class="menu-content">
-            <li><a class="menu-item" href="{{'altadetalle'}}" data-i18n="nav.dash.ecommerce">Alta detalle</a>
+            <li><a class="menu-item" href="{{'reporte'}}" data-i18n="nav.dash.ecommerce">Alta detalle</a>
             </li>
             <li><a class="menu-item" href="{{'reportedetalle'}}" data-i18n="nav.dash.crypto"> Consultar detalle</a>
             </li>

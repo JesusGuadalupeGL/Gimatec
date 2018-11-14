@@ -1,8 +1,10 @@
 @extends('layout.head')
 @section('contenido')
+<div class="table-responsive">
 <table class="table table-sm table-dark">
     <tr>
         <td>ID</td>
+		<td>Imagen</td>
         <td>Nombre</td>
         <td>A.Paterno</td>
         <td>A.Materno</td>
@@ -17,6 +19,7 @@
     @foreach($usuarios as $usu)
         <tr class="id">
             <td class="table-active">{{$usu->idu}}</td>
+			<td class="table-active"><img src="archivo/{{$usu->archivo}}" height="50px" whidth="50px"></td>
             <td class="table-primary">{{$usu->nombre}}</td>
             <td class="table-secondary">{{$usu->apat}}</td>
             <td class="table-success">{{$usu->amat}}</td>
@@ -31,4 +34,5 @@
         </tr>
     @endforeach
 </table>
+</div>
 @stop

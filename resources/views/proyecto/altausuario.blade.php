@@ -3,7 +3,7 @@
 @section('contenido')
 
 <h1> Alta de usuario</h1>
-<form action ="{{route('guardausuario')}}" method = 'POST' enctype= 'multipart/form-data'>
+<form action ="{{route('altausuario')}}" method='POST' enctype= 'multipart/form-data'>
 {{csrf_field()}}
 
 <div class='col-md-6'>
@@ -66,13 +66,13 @@ Activo<select class='form-control' name = 'activo'>
 </div>
 <div class='col-md-6'>
 @if($errors->first('archivo')) 
-<i> {{ $errors->first('archivo') }} </i> 
+<i> {{$errors->first('archivo')}} </i> 
 @endif	<br>
 <br>
 Selecionar Foto <input  class='form-control' type = 'file' name= 'archivo'>
 </div>
 <br>
-<button class="btn btn-primary" type = 'submit'>Guardar</button>
+<input class="btn btn-primary" type = 'submit' value='Guardar'>
 </form>
 @stop
 

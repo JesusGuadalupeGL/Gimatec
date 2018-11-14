@@ -33,21 +33,28 @@ class sistema extends Controller
     $amat = $request->amat;
     $empresa = $request->empresa;
     $telefono = $request->telefono;
-    $direccion= $request->direccion;
+	$calle = $request->calle;
+	$no_int = $request->no_int;
+	$no_ext = $request->no_ext;
+    $colonia= $request->colonia;
 	$idm = $request->idm;
     $cp = $request->cp;
     $idu = $request->idu;
     $ide = $request->ide;
     $archivo = $request->archivo;
 	//no se resive el archivo
-	 $this->validate($request,[
+	$this->validate($request,[
          'nombre'=>'required|alpha',
          'apat'=>'required|alpha',
          'amat'=>'required|alpha',
          'empresa'=>'required|alpha',
          'telefono'=>'required|numeric|min:10',
+		 'calle'=>'required|alpha',
+		 'no_int'=>'required|numeric|min:10',
+		 'no_ext'=>'required|numeric|min:10',
+		 'colonia'=>'required|alpha',
 		 'cp'=>['regex:/^[0-9]{5}/'],
-        'archivo' => 'image|mimes:jpg,jpeg,gif,png'
+         'archivo' => 'image|mimes:jpg,jpeg,gif,png'
          ]);
          
     $file = $request->file('archivo');
@@ -70,6 +77,10 @@ class sistema extends Controller
         $clie->amat = $request->amat;
         $clie->empresa = $request->empresa;
         $clie->telefono = $request->telefono;
+		$clie->calle = $request->calle;
+		$clie->no_int = $request->no_int;
+		$clie->no_ext = $request->no_ext;
+		$clie->colonia = $request->colonia;
         $clie->cp = $request->cp;
         $clie->idm = $request->idm;
         $clie->idu = $request->idu;
@@ -98,71 +109,6 @@ public function reportecliente()
 public function altausuario()
 	{
         return view ('proyecto.altausuario');
-    }
-	public function guardausuario(Request $request)
-	{   
-    $idu = $request->idu;   
-	$nombre = $request->nombre;
-    $apat = $request->apat;
-    $amat = $request->amat;
-    $calle = $request->calle;
-    $telefono = $request->telefono;
-    $correo_usu= $request->correo_usu;
-    $pass = $request->pass;
-    $tipo = $request->tipo;
-    $activo = $request->activo;
-	//no se resive el archivo
-	 $this->validate($request,[
-         'nombre'=>'required|alpha',
-         'apat'=>'required|alpha',
-         'amat'=>'required|alpha',
-         
-         'telefono'=>'required|numeric|min:10',
-         'correo_usu'=>'required|email',
-         'pass'=>'required',
-        'archivo' => 'image|mimes:jpg,jpeg,gif,png'
-         ]);
-         
-    $file = $request->file('archivo');
-    if($file!="")
-    {
-    $ldate = date('Ymd_His_');
-    $img = $file->getClientOriginalName();
-    $img2 = $ldate.$img;
-    \Storage::disk('local')->put($img2, \File::get($file));
-    }
-    else
-    {
-        $img2 = 'sinfoto.jpg';
-    }
-    //insert into maestros...     
-        $usu = new usuarios;
-        $usu->archivo = $img2;
-        $usu->idu = $request->idu;
-        $usu->nombre = $request->nombre;
-        $usu->apat = $request->apat;
-        $usu->amat = $request->amat;
-        $usu->calle = $request->calle;
-        $usu->telefono = $request->telefono;
-        $usu->correo_usu = $request->correo_usu;
-        $usu->pass = $request->pass;
-        $usu->tipo = $request->tipo;
-        $usu->activo = $request->activo;
-        $usu->save();
-        
-        $proceso = "ALTA USUARIO";
-        $mensaje = "usuario guardado correctamente";
-        return view ("proyecto.mensaje")
-        ->with('proceso', $proceso)
-        ->with('mensaje',$mensaje);
-	  
-	}
-//REPORTE USUARIO
-public function reporteusu() 
-    {
-        $usuarios = usuarios::orderBy('nombre', 'asc')->get();
-        return view ('proyecto.reporteusu')
-        ->with ('usuarios', $usuarios);
     }
 
     //procesos realizados con el catalogo CLIENTES

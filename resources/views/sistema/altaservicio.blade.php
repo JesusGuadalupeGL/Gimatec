@@ -3,7 +3,7 @@
 @section('contenido')
 
     <h1>Alta de servicios</h1>
-        <form action ="{{route('guardaservicio')}}" method = 'POST' enctype='multipart/form-data'>
+        <form action ="{{route('altaservicio')}}" method = 'POST' enctype='multipart/form-data'>
         {{csrf_field()}}
  
         <div class='col-md-6'>

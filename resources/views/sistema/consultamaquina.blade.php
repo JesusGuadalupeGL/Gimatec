@@ -15,7 +15,7 @@
         <tr class="id">
             <td class="table-active">{{$maq->idmac}}</td>
             <td class="table-primary">{{$maq->nombre}}</td>
-            <td class="table-secondary">{{$maq->archivo}}</td>
+            <td class="table-secondary"><img src="archivo/{{$maq->archivo}}" height="50px" whidth="50px"></td>
             <td class="table-success">{{$maq->descripcion}}</td>
             <td class="table-danger">{{$maq->precio}}</td>
             <td class="table-warning">{{$maq->stock}}</td>

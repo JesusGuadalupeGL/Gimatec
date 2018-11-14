@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Maquinas;
+use App\maquinas;
 
 class c_maquinas extends Controller
 {
@@ -26,12 +26,12 @@ class c_maquinas extends Controller
     public function guardamaquina(Request $request)
 	{
 		$validacion = $this->validate($request,
-		['nombre'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
-		'archivo'=>'image|mimes:jpg,jpeg,png,gif',
-		'descripcion'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
+		['nombre'=>['required','regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
+		'archivo'=>'required|image|mimes:jpg,jpeg,png,gif',
+		'descripcion'=>['required','regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
 		'precio'=>'required|numeric',
-		'stock'=>['regex:/^[0-9]+$/'],
-		'categoria'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
+		'stock'=>['required','regex:/^[0-9]+$/'],
+		'categoria'=>['required','regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
 		'existencias'=>'required|numeric'
 		]);
 

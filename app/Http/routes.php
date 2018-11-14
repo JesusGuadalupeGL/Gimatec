@@ -17,25 +17,22 @@ Route::get('/consultamaquina', 'c_maquinas@consulta')->name('consultamaquina');
 Route::get('/altaMaquina', 'c_maquinas@altaMaquina')->name('altaMaquina');
 Route::POST('/guardamaquina', 'c_maquinas@guardamaquina')->name('guardamaquina');
 
-//rupas del catalogo cliente
-Route::get('/altacliente','sistema@altacliente');
-Route::POST('/guardacliente','sistema@guardacliente')->name('guardacliente');
-Route::get('/reportecliente','sistema@reportecliente')->name('reportecliente');
-//rutas del catalogo usuarios
-Route::get('/altausuario','sistema@altausuario')->name('altausuario');
-Route::POST('/guardausuario','sistema@guardausuario')->name('guardausuario');
-Route::get('/reporteusu','sistema@reporteusu')->name('reporteusu');
-/*
-Route::get('/eliminam/{idm}','sistema@eliminam')->name('eliminam');
-Route::get('/modificaam/{idm}','sistema@modificam')->name('modificam');
+Route::resource('cliente','ControlladorCliente@create');
+Route::post('altacliente','ControlladorCliente@store')->name('altacliente');
+Route::get('reportecliente','ControlladorCliente@reportecliente')->name('reportecliente');
 
-Route::POST('/guardaedicionm','sistema@guardaedicionm')->name('guardaedicionm');
 
-*/
-Route::get('/altaservicio','sistema@altaservicio')->name('altaservicio');
-Route::POST('/guardaservicio','sistema@guardaservicio')->name('guardaservicio');
-Route::get('/reporteser','sistema@reporteser')->name('reporteser');
+Route::resource('usuario','ControlladorUsuario@create');
+Route::POST('altausuario','ControlladorUsuario@store')->name('altausuario');
+Route::get('reporteusu','ControlladorUsuario@reporteusu')->name('reporteusu');
 
-Route::get('/altadetalle','sistema@altadetalle')->name('altadetalle');
-Route::POST('/guardadetalle','sistema@guardadetalle')->name('guardadetalle');
-Route::get('/reportedetalle','sistema@reportedetalle')->name('reportedetalle');
+Route::resource('servicio','ControladorServicio@create');
+Route::post('altaservicio','ControladorServicio@store')->name('altaservicio');
+Route::get('reporteser','ControladorServicio@reporteser')->name('reporteser');
+
+
+Route::resource('reporte','ControladorReporte@create');
+Route::post('altareporte','ControladorReporte@store')->name('altareporte');
+Route::get('reportedetalle','ControladorReporte@reportedetalle')->name('reportedetalle');
+
+	

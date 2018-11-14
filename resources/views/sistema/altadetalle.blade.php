@@ -7,7 +7,7 @@
 
 
     <h1>Servicio Programado</h1>
-        <form action ="guardadetalle" method = 'POST' enctype='multipart/form-data'>
+        <form action ="altareporte" method = 'POST' enctype='multipart/form-data'>
         {{csrf_field()}}
         
         <div class='col-md-6'>
